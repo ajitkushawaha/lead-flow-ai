@@ -1,11 +1,10 @@
-import { base44 } from './base44Client';
+import { base44Client } from './base44Client.js';
 
+// Export sendSMS function from the client
+export const sendSMS = base44Client.functions?.sendSMS || (() => {
+  console.warn('sendSMS function not available - client may not be authenticated');
+  return Promise.reject(new Error('SMS function not available'));
+});
 
-export const sendSMS = base44.functions.sendSMS;
-
-export const testSMS = base44.functions.testSMS;
-
-export const sendWhatsAppMessage = base44.functions.sendWhatsAppMessage;
-
-export const whatsappWebhook = base44.functions.whatsappWebhook;
-
+// Export other functions as needed
+export const functions = base44Client.functions || {};
