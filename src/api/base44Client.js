@@ -1,4 +1,4 @@
-import { Base44SDK } from '@base44/sdk';
+import Base44SDK from '@base44/sdk';
 
 // Initialize the Base44 client
 export const base44Client = new Base44SDK({
