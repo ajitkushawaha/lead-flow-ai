@@ -1,7 +1,7 @@
-import { Base44 } from "@base44/sdk";
+import Base44 from "@base44/sdk";
 
 // Initialize the Base44 client
-export const base44Client = new Base44({
+const base44Client = new Base44({
   appId: '68a34f59ba6831bb25112d13',
   // Add any other required configuration
 });
@@ -30,3 +30,7 @@ export const initializeClient = async () => {
 
 // Initialize on module load
 initializeClient().catch(console.error);
+
+// Export both base44Client and base44 for compatibility
+export { base44Client };
+export const base44 = base44Client;
