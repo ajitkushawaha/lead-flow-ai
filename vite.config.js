@@ -14,7 +14,7 @@ export default defineConfig({
     extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json']
   },
   optimizeDeps: {
-    include: ['@base44/sdk'],  // 👈 force Vite to prebundle correctly
+    exclude: ['@base44/sdk'],  // 👈 force Vite to prebundle correctly
     esbuildOptions: {
       loader: {
         '.js': 'jsx',
