@@ -1,7 +1,7 @@
-import Base44SDK from '@base44/sdk';
+import * as Base44 from "@base44/sdk";
 
 // Initialize the Base44 client
-export const base44Client = new Base44SDK({
+export const base44Client = new Base44({
   appId: '68a34f59ba6831bb25112d13',
   // Add any other required configuration
 });
