@@ -1,4 +1,4 @@
-import {Base44} from "@base44/sdk";
+import * as Base44 from "@base44/sdk";
 
 // Initialize the Base44 client
 const base44Client = new Base44({
